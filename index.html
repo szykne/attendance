@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Frekwencja uczniów</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>📋 Frekwencja uczniów</h1>
+    <div class="controls">
+        <input type="date" id="datePicker">
+        <button onclick="goToToday()">Dziś</button>
+    </div>
+    <table id="attendanceTable">
+        <thead>
+            <tr>
+                <th>Nr</th>
+                <th>Imię</th>
+                <th>Obecność</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="summary">
+        <p>Frekwencja: <span id="attendancePercent">0%</span></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
