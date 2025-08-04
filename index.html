@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frekwencja - Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="login-section" class="card">
+      <h2>Zaloguj się</h2>
+      <input type="text" id="login-username" placeholder="Login" />
+      <input type="password" id="login-password" placeholder="Hasło" />
+      <button onclick="login()">Zaloguj</button>
+      <p>Nie masz konta? <a href="#" onclick="showRegister()">Zarejestruj się</a></p>
+    </div>
+
+    <div id="register-section" class="card hidden">
+      <h2>Rejestracja</h2>
+      <input type="text" id="register-username" placeholder="Login" />
+      <input type="password" id="register-password" placeholder="Hasło" />
+      <button onclick="register()">Zarejestruj</button>
+      <p>Masz już konto? <a href="#" onclick="showLogin()">Zaloguj się</a></p>
+    </div>
+
+    <div id="main-section" class="hidden">
+      <div class="top-bar">
+        <span id="welcome"></span>
+        <button onclick="logout()">Wyloguj</button>
+      </div>
+
+      <div id="admin-controls" class="hidden">
+        <h3>Nadaj rangę VIP</h3>
+        <input type="text" id="vip-username" placeholder="Login użytkownika" />
+        <button onclick="promoteToVIP()">Nadaj VIP</button>
+      </div>
+
+      <div class="date-controls">
+        <input type="date" id="selected-date" onchange="renderTable()" />
+        <button onclick="setToday()">Dzisiaj</button>
+        <button onclick="exportCSV()" id="export-btn">Eksportuj CSV</button>
+      </div>
+
+      <div id="table-container"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
